@@ -8,48 +8,48 @@ const ComoFunciona = () => {
   const steps = [
     {
       icon: Search,
-      title: "1. Diagnóstico Completo",
-      subtitle: "Análise detalhada da sua operação atual",
-      description: "Realizamos uma auditoria completa dos seus processos de captação e conversão para identificar exatamente onde estão as oportunidades de melhoria.",
+      title: "1. Análise & Mapeamento",
+      subtitle: "Imergimos nos seus dados e processos para entender a fundo seu varejo",
+      description: "Realizamos uma análise abrangente e detalhada dos seus dados operacionais e processos de vendas para identificar oportunidades estratégicas de otimização e crescimento sustentável.",
       features: [
-        "Auditoria de funis existentes",
-        "Análise de concorrência",
-        "Mapeamento de jornada do cliente",
-        "Identificação de gargalos",
-        "Relatório com oportunidades"
+        "Análise profunda de dados históricos",
+        "Mapeamento completo de processos",
+        "Identificação de gaps e oportunidades",
+        "Avaliação do potencial de IA específico",
+        "Relatório executivo com insights estratégicos"
       ],
-      duration: "2-5 dias",
-      deliverable: "Relatório detalhado + Plano de ação"
+      duration: "Dias 1-30",
+      deliverable: "Diagnóstico estratégico + Roadmap personalizado"
     },
     {
       icon: Settings,
-      title: "2. Implementação Estratégica",
-      subtitle: "Configuração personalizada da sua solução",
-      description: "Nossa equipe especializada implementa toda a infraestrutura necessária, desde landing pages otimizadas até automações avançadas, tudo personalizado para o seu negócio.",
+      title: "2. Integração & Configuração",
+      subtitle: "Conectamos as principais áreas da sua loja e ativamos os módulos de IA do Scala.AI",
+      description: "Nossa equipe especializada realiza a integração completa dos sistemas existentes com os módulos Scala.AI™, configurando cada componente para funcionar perfeitamente com sua operação específica.",
       features: [
-        "Setup de automações",
-        "Criação de landing pages",
-        "Configuração de integrações",
-        "Treinamento da equipe",
-        "Testes e otimizações"
+        "Integração completa com sistemas existentes",
+        "Configuração personalizada dos módulos IA",
+        "Setup avançado de automações inteligentes",
+        "Treinamento especializado da equipe",
+        "Testes rigorosos e validações de segurança"
       ],
-      duration: "7-14 dias",
-      deliverable: "Sistema completo funcionando"
+      duration: "Dias 31-60",
+      deliverable: "Ecossistema Scala.AI™ totalmente operacional"
     },
     {
       icon: Trophy,
-      title: "3. Resultados e Otimização",
-      subtitle: "Acompanhamento e melhoria contínua",
-      description: "Monitoramos os resultados em tempo real e fazemos ajustes constantes para maximizar a performance e garantir que você alcance os melhores resultados possíveis.",
+      title: "3. Otimização & Resultados",
+      subtitle: "Acompanhamos os dados, fazemos ajustes e geramos os primeiros resultados mensuráveis de forma contínua",
+      description: "Monitoramento contínuo de performance com ajustes inteligentes baseados em dados reais, garantindo que você obtenha o máximo retorno do investimento e resultados sustentáveis a longo prazo.",
       features: [
-        "Monitoramento 24/7",
-        "Relatórios semanais",
-        "Otimizações contínuas",
-        "Suporte dedicado",
-        "Garantia de resultados"
+        "Monitoramento contínuo de KPIs",
+        "Otimizações baseadas em machine learning",
+        "Ajustes estratégicos em tempo real",
+        "Relatórios detalhados de performance",
+        "Garantia comprovada de resultados"
       ],
-      duration: "Contínuo",
-      deliverable: "ROI comprovado em 30 dias"
+      duration: "Dias 61-90",
+      deliverable: "ROI comprovado + Sistema otimizado e escalável"
     }
   ]
 
@@ -64,17 +64,23 @@ const ComoFunciona = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Como <span className="gradient-text">Funciona</span> Nossa Metodologia
+            <span className="gradient-text">Pacote Piloto</span>: 90 Dias Para Ver a Diferença
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Um processo estruturado em 3 etapas que garante resultados mensuráveis 
-            e transformação real do seu negócio.
+            Metodologia estruturada em 3 etapas que garante implementação eficaz 
+            e resultados mensuráveis na transformação digital do seu varejo.
           </p>
         </motion.div>
 
         <div className="space-y-12">
           {steps.map((step, index) => {
             const IconComponent = step.icon
+            const stepColors = [
+              'from-blue-900/20 to-blue-800/20 border-blue-500/20',
+              'from-green-900/20 to-green-800/20 border-green-500/20', 
+              'from-purple-900/20 to-purple-800/20 border-purple-500/20'
+            ]
+            const stepColor = stepColors[index]
             return (
               <motion.div
                 key={index}
@@ -88,7 +94,7 @@ const ComoFunciona = () => {
               >
                 {/* Content */}
                 <div className="flex-1 lg:max-w-xl">
-                  <div className="glass-card p-8 hover:bg-slate-800/60 transition-all duration-300">
+                  <div className={`glass-card p-8 hover:bg-slate-800/60 transition-all duration-300 bg-gradient-to-r ${stepColor}`}>
                     <div className="flex items-center gap-4 mb-6">
                       <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
                         <IconComponent className="text-white" size={28} />
@@ -178,16 +184,16 @@ const ComoFunciona = () => {
         >
           <div className="glass-card p-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
             <h3 className="text-2xl font-bold mb-4">
-              Garantia de <span className="gradient-text">Resultados</span>
+              Compromisso com <span className="gradient-text">Resultados</span>
             </h3>
             <p className="text-muted mb-6">
-              Se você não obtiver pelo menos 50% de melhoria na conversão de leads em 30 dias, 
-              devolvemos 100% do investimento.
+              Nosso compromisso é com seus resultados. Trabalhamos até que você 
+              alcance as melhorias esperadas para seu negócio.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-primary" size={16} />
-                <span>Garantia de 30 dias</span>
+                <span>Garantia de 90 dias</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-primary" size={16} />
