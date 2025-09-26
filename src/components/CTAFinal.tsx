@@ -6,16 +6,16 @@ import { ArrowRight, Clock, CheckCircle, Zap, Gift, AlertCircle } from 'lucide-r
 
 const CTAFinal = () => {
   const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%2C%20quero%20meu%20diagnóstico%20gratuito'
+    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
     window.open(whatsappUrl, '_blank', 'noopener')
   }
 
   const features = [
-    "Análise completa do processo atual",
-    "Identificação de pontos de melhoria",
-    "Plano de implementação personalizado",
-    "Métricas e indicadores sugeridos",
-    "Roadmap de automação estruturado"
+    "Análise detalhada do potencial de IA no seu segmento",
+    "Identificação de oportunidades específicas de crescimento",
+    "Estratégias personalizadas de implementação do Scala.AI™", 
+    "Roadmap detalhado de transformação digital do varejo",
+    "Estimativa realista de ROI e cronograma de resultados"
   ]
 
   return (
@@ -35,13 +35,13 @@ const CTAFinal = () => {
           className="text-center mb-12"
         >
           <h2 className="font-arthaus text-3xl md:text-6xl mb-6 leading-tight">
-            Pronto para <span className="gradient-text">Transformar</span> 
+            <span className="gradient-text">Pare de Adivinhar</span> 
             <br />
-            <span className="text-2xl md:text-4xl">seus Processos de Venda?</span>
+            <span className="text-2xl md:text-4xl">e Comece a Vender Mais</span>
           </h2>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Comece com um diagnóstico gratuito e detalhado do seu processo atual. 
-            <span className="text-white font-medium">Sem compromisso, análise completa, plano personalizado.</span>
+            Descubra o potencial do seu varejo em uma sessão estratégica gratuita. 
+            <span className="text-white font-medium">Sem compromisso, apenas insights valiosos.</span>
           </p>
         </motion.div>
 
@@ -56,16 +56,17 @@ const CTAFinal = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent border border-accent/30 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <CheckCircle size={16} />
-              Diagnóstico Gratuito
+              Sessão Estratégica Gratuita
             </div>
             
             <h3 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Diagnóstico Completo</span> do seu Processo
+              <span className="gradient-text">Sessão Estratégica</span> Personalizada
             </h3>
             
             <p className="text-lg text-gray mb-8">
-              Análise detalhada da sua operação atual com plano de implementação personalizado.
-              <span className="text-white font-medium"> Sem compromisso, totalmente gratuito.</span>
+              Uma análise completa e personalizada do potencial de transformação do seu varejo 
+              com estratégias específicas de IA do ecossistema Scala.AI™.
+              <span className="text-white font-medium block mt-2">Sem compromisso. Totalmente gratuito. Apenas valor.</span>
             </p>
           </div>
 
@@ -99,7 +100,7 @@ const CTAFinal = () => {
               className="btn-primary text-xl py-6 px-12 mb-4 group inline-flex items-center gap-4"
             >
               <Zap className="group-hover:scale-110 transition-transform" size={24} />
-              Agendar meu diagnóstico agora
+              Agendar Sessão Gratuita Agora
               <ArrowRight className="group-hover:translate-x-2 transition-transform" size={24} />
             </button>
             
@@ -118,8 +119,9 @@ const CTAFinal = () => {
           className="text-center"
         >
           <p className="text-gray max-w-2xl mx-auto">
-            Nosso diagnóstico vai mostrar exatamente onde seu processo pode melhorar 
-            e qual o potencial de crescimento que você tem pela frente.
+            Nossa sessão estratégica vai revelar exatamente como o ecossistema Scala.AI™ 
+            pode revolucionar o seu varejo e qual o potencial real de crescimento e otimização 
+            que você tem pela frente.
           </p>
         </motion.div>
       </div>
