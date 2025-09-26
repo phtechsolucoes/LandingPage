@@ -2,33 +2,33 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Target, Zap, BarChart3, Users, MessageSquare, TrendingUp, ArrowRight } from 'lucide-react'
+import { Target, Warehouse, MessageSquare, BarChart3, Users, TrendingUp, ArrowRight, Zap } from 'lucide-react'
 
 const SolucaoEndToEnd = () => {
   const processSteps = [
     {
       icon: Target,
-      title: "Captação Inteligente",
-      description: "Landing pages otimizadas, forms personalizados e múltiplos canais de captação",
-      features: ["Landing pages de alta conversão", "Forms otimizados", "Integração multi-canal"]
+      title: "IA de Personalização",
+      description: "Conecte-se com cada cliente de forma única, criando campanhas sob medida que realmente convertem e geram mais vendas.",
+      features: ["Segmentação inteligente de clientes", "Campanhas personalizadas automáticas", "Experiência única por perfil"]
     },
     {
-      icon: Zap,
-      title: "Automação Avançada",
-      description: "Fluxos automáticos de nutrição, qualificação e distribuição de leads",
-      features: ["Nutrição automática", "Score de leads", "Distribuição inteligente"]
+      icon: Warehouse,
+      title: "IA de Estoque Inteligente",
+      description: "Previsões de demanda precisas e reposição automática, garantindo que o produto certo esteja sempre disponível no momento ideal.",
+      features: ["Previsão de demanda avançada", "Reposição automática inteligente", "Otimização de capital de giro"]
     },
     {
       icon: MessageSquare,
-      title: "Comunicação Personalizada",
-      description: "Mensagens direcionadas via email, WhatsApp e SMS baseadas no comportamento",
-      features: ["Email marketing", "WhatsApp automático", "SMS direcionado"]
+      title: "IA de Conversão",
+      description: "Chatbots e voicebots que não só respondem perguntas, mas convertem visitantes em clientes satisfeitos, 24 horas por dia.",
+      features: ["Atendimento automatizado 24/7", "Qualificação inteligente de leads", "Conversão otimizada por IA"]
     },
     {
       icon: BarChart3,
-      title: "Análise em Tempo Real",
-      description: "Dashboards completos com métricas de performance e ROI detalhado",
-      features: ["Dashboards em tempo real", "Métricas de conversão", "ROI detalhado"]
+      title: "IA de Decisão",
+      description: "Dashboards intuitivos com insights em tempo real para orientar suas decisões estratégicas, eliminando completamente o achismo.",
+      features: ["Dashboards em tempo real", "Insights preditivos automatizados", "Relatórios inteligentes personalizados"]
     }
   ]
 
@@ -43,11 +43,11 @@ const SolucaoEndToEnd = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Nossa <span className="gradient-text">Solução End-to-End</span>
+            Os <span className="gradient-text">Pilares que Sustentam</span> o Seu Crescimento
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Um sistema completo que automatiza todo o processo de captação até a conversão, 
-            garantindo que nenhum lead seja perdido.
+            Quatro módulos de IA integrados que trabalham em sinergia para transformar 
+            completamente a operação do seu varejo com resultados mensuráveis.
           </p>
         </motion.div>
 
@@ -111,18 +111,18 @@ const SolucaoEndToEnd = () => {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Resultados que <span className="gradient-text">Transformam Negócios</span>
+              Resultados que <span className="gradient-text">Transformam o Varejo</span>
             </h3>
             <p className="text-lg text-muted">
-              Com nossa solução completa, empresas conseguem:
+              Com o ecossistema Scala.AI™, varejistas conquistam:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: TrendingUp, metric: "+180%", label: "Aumento em Conversões" },
-              { icon: Users, metric: "95%", label: "Leads Capturados" },
-              { icon: Zap, metric: "24/7", label: "Automação Ativa" },
+              { icon: TrendingUp, metric: "+180%", label: "Crescimento em Vendas" },
+              { icon: Users, metric: "95%", label: "Satisfação do Cliente" },
+              { icon: Zap, metric: "24/7", label: "IA Sempre Ativa" },
               { icon: BarChart3, metric: "ROI 5x", label: "Retorno Garantido" }
             ].map((result, index) => {
               const IconComponent = result.icon
