@@ -4,80 +4,105 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { 
   TrendingUp, 
-  Clock, 
+  ShoppingCart, 
   DollarSign, 
   Users, 
   Zap, 
-  Shield,
+  Brain,
   BarChart3,
   Target,
-  Smartphone,
-  Mail,
+  Store,
+  Package,
   MessageSquare,
-  Gauge
+  Clock,
+  Shield,
+  Smartphone,
+  Eye,
+  Settings
 } from 'lucide-react'
 
 const Beneficios = () => {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Conversão Otimizada",
-      description: "Melhore sua taxa de conversão com automações inteligentes e processos estruturados baseados em dados."
+      title: "Vendas Inteligentes",
+      description: "Aumente suas vendas com IA que identifica oportunidades, personaliza ofertas e converte mais clientes automaticamente."
+    },
+    {
+      icon: Package,
+      title: "Estoque Otimizado",
+      description: "Nunca mais fique sem produtos em alta demanda ou com excesso parado. IA prevê demanda com 95% de precisão."
+    },
+    {
+      icon: Users,
+      title: "Clientes Fidelizados",
+      description: "Crie experiências personalizadas que fazem seus clientes voltarem sempre, aumentando o valor de vida do cliente."
+    },
+    {
+      icon: Brain,
+      title: "Decisões Baseadas em Dados",
+      description: "Pare de decidir no achismo. Receba insights em tempo real sobre seu negócio para tomar decisões certeiras."
+    },
+    {
+      icon: MessageSquare,
+      title: "Atendimento 24/7",
+      description: "Chatbots inteligentes que atendem, qualificam e convertem clientes mesmo quando sua loja está fechada."
     },
     {
       icon: Clock,
       title: "Tempo Recuperado",
-      description: "Automatize tarefas repetitivas e libere sua equipe para focar no que realmente importa: relacionamento com clientes."
+      description: "Automatize processos repetitivos e libere sua equipe para focar em estratégia e relacionamento com clientes."
     },
     {
       icon: DollarSign,
-      title: "ROI Previsível",
-      description: "Investimento que se justifica com o aumento gradual em vendas e redução de desperdícios operacionais."
-    },
-    {
-      icon: Users,
-      title: "Controle Total de Leads",
-      description: "Sistema que garante que nenhum lead seja esquecido ou deixado sem follow-up adequado."
-    },
-    {
-      icon: Zap,
-      title: "Resposta em Segundos",
-      description: "Qualificação automática que responde leads instantaneamente, aumentando significativamente as chances de conversão."
-    },
-    {
-      icon: Shield,
-      title: "Implementação Guiada",
-      description: "Acompanhamento passo a passo para garantir que o processo funcione adequadamente na sua empresa."
-    },
-    {
-      icon: BarChart3,
-      title: "Dashboards em Tempo Real",
-      description: "Visualize performance, ROI e métricas importantes com relatórios automatizados e em tempo real."
+      title: "ROI Sustentável",
+      description: "Investimento focado em resultados reais. Melhoria contínua na performance financeira com métricas transparentes."
     },
     {
       icon: Target,
-      title: "Segmentação Inteligente",
-      description: "Qualifique e segmente leads automaticamente para abordagens mais assertivas e personalizadas."
+      title: "Campanhas Certeiras",
+      description: "Marketing personalizado que realmente converte. Segmentação inteligente e ofertas sob medida para cada cliente."
+    },
+    {
+      icon: BarChart3,
+      title: "Métricas Transparentes",
+      description: "Dashboards em tempo real que mostram exatamente onde seu dinheiro está sendo ganho ou perdido."
+    },
+    {
+      icon: Shield,
+      title: "Implementação Segura",
+      description: "Processo estruturado em 90 dias com acompanhamento dedicado. Sua operação nunca para durante a transição."
     },
     {
       icon: Smartphone,
-      title: "Multi-canal Integrado",
-      description: "Gerencie leads de todas as fontes em um só lugar: site, redes sociais, anúncios e mais."
+      title: "Integração Total",
+      description: "Conecta todos os seus sistemas (PDV, e-commerce, redes sociais) em uma única plataforma inteligente."
     },
     {
-      icon: Mail,
-      title: "Email Marketing Automático",
-      description: "Sequências de email inteligentes que nutrem leads e os conduzem através do funil de vendas."
+      icon: Settings,
+      title: "Otimização Contínua",
+      description: "IA que aprende constantemente e otimiza seus processos automaticamente, melhorando resultados dia após dia."
+    }
+  ]
+
+  const transformationAreas = [
+    {
+      icon: Store,
+      title: "Operação",
+      description: "Processos otimizados e automatizados",
+      benefits: ["Redução de 70% em tarefas manuais", "Eficiência operacional +150%", "Menos erros, mais precisão"]
     },
     {
-      icon: MessageSquare,
-      title: "WhatsApp Business API",
-      description: "Automação completa via WhatsApp com mensagens personalizadas e follow-ups automáticos."
+      icon: Users,
+      title: "Experiência do Cliente", 
+      description: "Jornada personalizada e inteligente",
+      benefits: ["Satisfação +85%", "Tempo de resposta: segundos", "Personalização em escala"]
     },
     {
-      icon: Gauge,
-      title: "Performance Otimizada",
-      description: "Melhoria contínua baseada em dados e inteligência artificial para máxima performance."
+      icon: TrendingUp,
+      title: "Resultados Financeiros",
+      description: "Crescimento sustentável e previsível", 
+      benefits: ["ROI 300-500%", "Vendas +150-400%", "Margem otimizada +40%"]
     }
   ]
 
@@ -92,14 +117,59 @@ const Beneficios = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            <span className="gradient-text">Benefícios</span> que Transformam seu Negócio
+            <span className="gradient-text">Benefícios</span> do Ecossistema Scala.AI™
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Descubra como nossa solução pode revolucionar seus resultados e 
-            levar sua empresa para o próximo nível.
+            Descubra como a integração de IA, ferramentas, pessoas e processos pode revolucionar 
+            completamente os resultados do seu varejo.
           </p>
         </motion.div>
 
+        {/* Transformation Areas */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            <span className="gradient-text">Áreas de Transformação</span> do Seu Negócio
+          </h3>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {transformationAreas.map((area, index) => {
+              const IconComponent = area.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="glass-card p-8 text-center hover:bg-slate-800/60 transition-all duration-300"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="text-white" size={32} />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-white">{area.title}</h4>
+                  <p className="text-accent mb-6 font-medium">{area.description}</p>
+                  
+                  <div className="space-y-3">
+                    {area.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center gap-3 text-sm">
+                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                        <span className="text-muted">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </motion.div>
+
+        {/* Detailed Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon
@@ -111,7 +181,7 @@ const Beneficios = () => {
                 viewport={{ once: true }}
                 transition={{ 
                   duration: 0.5, 
-                  delay: index * 0.1,
+                  delay: index * 0.05,
                   ease: "easeOut"
                 }}
                 whileHover={{ 
@@ -138,7 +208,7 @@ const Beneficios = () => {
           })}
         </div>
 
-        {/* Summary section */}
+        {/* Implementation Process */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,39 +218,64 @@ const Beneficios = () => {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Implementação <span className="gradient-text">Estruturada</span> e Transparente
+              <span className="gradient-text">Implementação Scala.AI™</span>: Segura e Estruturada
             </h3>
-            <p className="text-lg text-gray max-w-3xl mx-auto">
-              Cada etapa é planejada e executada com métricas claras, 
-              garantindo que você acompanhe todo o progresso.
+            <p className="text-lg text-muted max-w-3xl mx-auto">
+              Processo em 90 dias que transforma seu varejo sem interromper suas operações. 
+              Cada etapa é planejada, executada e monitorada com métricas claras.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="text-white" size={32} />
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Eye className="text-white" size={32} />
               </div>
-              <div className="text-lg font-bold gradient-text mb-2">Diagnóstico</div>
-              <div className="text-gray text-sm">Análise completa do processo atual</div>
+              <div className="text-lg font-bold gradient-text mb-2">Análise & Mapeamento</div>
+              <div className="text-muted text-sm mb-4">Dias 1-30</div>
+              <div className="text-muted text-xs leading-relaxed">
+                Análise profunda dos seus dados e processos para identificar oportunidades específicas de IA
+              </div>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="text-white" size={32} />
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Settings className="text-white" size={32} />
               </div>
-              <div className="text-lg font-bold gradient-text mb-2">Implementação</div>
-              <div className="text-gray text-sm">Execução guiada e acompanhada</div>
+              <div className="text-lg font-bold gradient-text mb-2">Integração & Setup</div>
+              <div className="text-muted text-sm mb-4">Dias 31-60</div>
+              <div className="text-muted text-xs leading-relaxed">
+                Configuração e ativação dos módulos Scala.AI™ integrados aos seus sistemas existentes
+              </div>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="text-white" size={32} />
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="text-white" size={32} />
               </div>
-              <div className="text-lg font-bold gradient-text mb-2">Otimização</div>
-              <div className="text-gray text-sm">Ajustes baseados em dados reais</div>
+              <div className="text-lg font-bold gradient-text mb-2">Otimização & Resultados</div>
+              <div className="text-muted text-sm mb-4">Dias 61-90</div>
+              <div className="text-muted text-xs leading-relaxed">
+                Ajustes contínuos e otimização baseada em dados reais para maximizar ROI
+              </div>
             </div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl border border-accent/30"
+          >
+            <div className="text-center">
+              <h4 className="text-xl font-bold mb-2 text-white">Garantia de Sucesso</h4>
+              <p className="text-accent text-sm">
+                Se não alcançarmos pelo menos 150% de ROI em 90 dias, continuamos trabalhando 
+                gratuitamente até atingir os resultados prometidos.
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
