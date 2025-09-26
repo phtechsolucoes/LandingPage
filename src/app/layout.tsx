@@ -11,9 +11,9 @@ type Metadata = {
 }
 
 export const metadata: Metadata = {
-  title: 'Solução End-to-End para Captação de Leads',
-  description: 'Transforme sua empresa com nossa solução completa de automação e captação de leads. Diagnóstico, implementação e resultados garantidos.',
-  keywords: 'leads, automação, vendas, conversão, marketing digital',
+  title: 'Ph Tech Soluções',
+  description: 'Conheça a consultoria de Scala.ai que vai levar seu comércio a outro patamar!',
+  keywords: 'ia, automação, vendas, conversão, marketing digital',
   authors: [{ name: 'Landing Page' }],
   viewport: 'width=device-width, initial-scale=1',
 }
