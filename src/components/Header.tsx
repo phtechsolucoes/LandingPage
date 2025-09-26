@@ -228,19 +228,7 @@ const Header = () => {
                     }}
                     className="btn-secondary text-sm w-full"
                   >
-                    WhatsApp Agora
-                  </motion.button>
-                  <motion.button
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: (navItems.length + 1) * 0.1 }}
-                    onClick={() => {
-                      handleCTAClick()
-                      setIsMenuOpen(false)
-                    }}
-                    className="btn-primary text-sm w-full"
-                  >
-                    Quero meu diagnóstico
+                    Fale Conosco
                   </motion.button>
                 </div>
               </nav>
