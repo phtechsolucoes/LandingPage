@@ -114,20 +114,18 @@ const Header = () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
                 setIsMenuOpen(false)
               }}
-              className="focus:outline-none focus:ring-2 focus:ring-accent rounded-lg p-1 transition-transform hover:scale-105"
+              className="focus:outline-none focus:ring-2 focus:ring-accent rounded-lg p-1 transition-transform hover:scale-105 flex items-center gap-3"
             >
               <Image 
                 src="/logo-phtech.png" 
-                alt="PH Tech - Voltar ao topo" 
-                width={96} 
-                height={96}
-                className="h-24 w-auto"
+                alt="PH Tech Soluções - Voltar ao topo" 
+                width={60} 
+                height={60}
+                className="h-20 w-auto"
                 priority
               />
             </button>
-          </motion.div>
-
-          {/* Desktop Navigation */}
+          </motion.div>          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
             {navItems.map((item, index) => (
               <motion.a
