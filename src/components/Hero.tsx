@@ -6,7 +6,7 @@ import { ArrowRight, Zap } from 'lucide-react'
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%2C%20quero%20meu%20diagnóstico%20gratuito'
+    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
     window.open(whatsappUrl, '_blank', 'noopener')
   }
 
@@ -27,7 +27,7 @@ const Hero = () => {
           >
             <span className="inline-flex items-center gap-2 bg-accent/20 text-accent border border-accent/30 px-4 py-2 rounded-full text-sm font-medium">
               <Zap size={16} />
-              Processos End-to-End
+              Ecossistema Scala.AI™
             </span>
           </motion.div>
 
@@ -37,9 +37,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-arthaus text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight"
           >
-            <span className="gradient-text">Processos de Vendas</span> Automatizados,
+            Sua loja <span className="gradient-text">no automático</span>
             <br />
-            do Início ao Fim
+            com Inteligência Artificial
           </motion.h1>
 
           <motion.p
@@ -48,8 +48,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray max-w-4xl mx-auto mb-12 leading-relaxed"
           >
-            Da captação ao pós-venda, desenhamos e implantamos um fluxo que não deixa nenhum lead para trás. 
-            <span className="text-white font-medium">Processo estruturado, métricas transparentes e resultados previsíveis.</span>
+            Da gestão do estoque à venda final, o <span className="text-accent font-medium">Scala.AI™</span> transforma 
+            dados em resultados previsíveis com inteligência artificial.
+            <span className="text-white font-medium block mt-2">Soluções integradas para o varejo do futuro.</span>
           </motion.p>
 
           <motion.div
@@ -62,12 +63,12 @@ const Hero = () => {
               onClick={handleWhatsAppClick}
               className="btn-primary flex items-center gap-3 text-lg group"
             >
-              Falar agora no WhatsApp
+              Agendar Sessão Gratuita Agora
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
             
             <p className="text-sm text-gray">
-              ✓ Sem compromisso • ✓ Análise completa • ✓ 100% Gratuito
+              ✓ Sem compromisso • ✓ Insights valiosos • ✓ 100% Gratuito
             </p>
           </motion.div>
 
@@ -78,10 +79,10 @@ const Hero = () => {
             className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
           >
             {[
-              { label: "Resposta em segundos", desc: "Qualificação automática" },
-              { label: "Follow-up estruturado", desc: "Nutrição inteligente" },
-              { label: "Métricas transparentes", desc: "Resultados previsíveis" },
-              { label: "LGPD-first", desc: "Conformidade garantida" }
+              { label: "Aumento de Receita", desc: "Vendas e ticket médio otimizados" },
+              { label: "Eficiência Operacional", desc: "Estoque e processos inteligentes" },
+              { label: "Controle Total", desc: "Decisões baseadas em dados" },
+              { label: "Ecosystem Scala.AI™", desc: "Soluções integradas" }
             ].map((benefit, index) => (
               <motion.div 
                 key={index} 
