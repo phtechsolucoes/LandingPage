@@ -38,13 +38,23 @@ const Problema = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Por que Sua Loja está <span className="text-red-400">Perdendo Dinheiro</span>?
-          </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto">
-            A cada dia sem inteligência artificial no seu varejo, você perde oportunidades valiosas 
-            de aumentar vendas e fidelizar clientes.
-          </p>
+              <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
+                Você está deixando dinheiro na mesa todos os dias
+              </h2>
+              <p className="text-xl text-muted max-w-3xl mx-auto text-left">
+                Você está deixando dinheiro na mesa todos os dias.
+              </p>
+              <ul className="mt-4 text-left list-disc list-inside space-y-2 max-w-3xl mx-auto">
+                <li>Mensagens no WhatsApp que não são respondidas a tempo.</li>
+                <li>Carrinhos abandonados no checkout.</li>
+                <li>Clientes que compram uma vez e nunca mais voltam.</li>
+              </ul>
+
+              <p className="text-xl text-muted max-w-3xl mx-auto mt-6">
+                O resultado? <strong className="text-red-400">entre 20% e 40% das suas vendas potenciais evaporam</strong> todos os meses.
+                <br />
+                <strong className="text-muted">Isso pode significar de R$ 500 mil a R$ 3 milhões em perdas ao longo do ano.</strong>
+              </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -80,27 +90,27 @@ const Problema = () => {
           transition={{ duration: 0.8 }}
           className="glass-card p-8 md:p-12 text-center bg-gradient-to-r from-red-900/20 to-orange-900/20 border-red-500/20"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Resultado: <span className="text-red-400">Prejuízo de até R$ 100.000/mês</span>
-          </h3>
-          <p className="text-lg text-muted mb-6">
-            Lojas que não usam IA perdem em média 40% das oportunidades de venda 
-            e têm 60% mais produtos parados em estoque.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">40%</div>
-              <div className="text-sm text-muted">Vendas Perdidas</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">60%</div>
-              <div className="text-sm text-muted">Estoque Parado</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">R$ 100k</div>
-              <div className="text-sm text-muted">Prejuízo Mensal</div>
-            </div>
-          </div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                O impacto real
+              </h3>
+              <p className="text-lg text-muted mb-6">
+                Entre <strong className="text-red-400">20% e 40%</strong> das vendas potenciais somem todo mês — e isso acumula.
+                Se você já escala tráfego pago, cada mensagem não respondida no WhatsApp e cada carrinho abandonado é receita perdida.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-accent mb-2">20–40%</div>
+                  <div className="text-sm text-muted">Vendas potenciais perdidas</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+                  <div className="text-sm text-muted">Canal de vendas sem automação</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-accent mb-2">Risco Acumulado</div>
+                  <div className="text-sm text-muted">Perdas significativas ao longo do ano</div>
+                </div>
+              </div>
         </motion.div>
       </div>
     </section>

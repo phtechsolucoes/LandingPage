@@ -35,13 +35,12 @@ const CTAFinal = () => {
           className="text-center mb-12"
         >
           <h2 className="font-arthaus text-3xl md:text-6xl mb-6 leading-tight">
-            <span className="gradient-text">Pare de Adivinhar</span> 
+            Você pode continuar perdendo vendas todos os dias…
             <br />
-            <span className="text-2xl md:text-4xl">e Comece a Vender Mais</span>
+            Ou pode transformar o WhatsApp e o checkout em um motor previsível de crescimento.
           </h2>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Descubra o potencial do seu varejo em uma sessão estratégica gratuita. 
-            <span className="text-white font-medium">Sem compromisso, apenas insights valiosos.</span>
+            Agende um diagnóstico estratégico gratuito e descubra como recuperar vendas, automatizar o WhatsApp para e-commerce e ganhar previsibilidade.
           </p>
         </motion.div>
 
@@ -63,11 +62,11 @@ const CTAFinal = () => {
               <span className="gradient-text">Sessão Estratégica</span> Personalizada
             </h3>
             
-            <p className="text-lg text-gray mb-8">
-              Uma análise completa e personalizada do potencial de transformação do seu varejo 
-              com estratégias específicas de IA do ecossistema Scala.AI™.
-              <span className="text-white font-medium block mt-2">Sem compromisso. Totalmente gratuito. Apenas valor.</span>
-            </p>
+              <p className="text-lg text-gray mb-8">
+                Uma análise completa e personalizada do potencial de transformação do seu varejo 
+                com estratégias específicas de IA do ecossistema Scala.AI™.
+                <span className="text-white font-medium block mt-2">Sem compromisso. Totalmente gratuito.</span>
+              </p>
           </div>
 
           {/* Features List */}
@@ -100,7 +99,7 @@ const CTAFinal = () => {
               className="btn-primary text-xl py-6 px-12 mb-4 group inline-flex items-center gap-4"
             >
               <Zap className="group-hover:scale-110 transition-transform" size={24} />
-              Agendar Sessão Gratuita Agora
+              Agendar Diagnóstico Estratégico Gratuito
               <ArrowRight className="group-hover:translate-x-2 transition-transform" size={24} />
             </button>
             

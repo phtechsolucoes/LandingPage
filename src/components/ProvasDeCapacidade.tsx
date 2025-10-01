@@ -146,7 +146,7 @@ const ProvasDeCapacidade = () => {
     { icon: BarChart3, text: 'Métricas transparentes e relatórios detalhados' },
     { icon: Zap, text: 'Suporte técnico durante toda a implementação' },
     { icon: Brain, text: 'IA configurada para seu segmento específico' },
-    { icon: CheckCircle, text: 'Metodologia comprovada em 90 dias' }
+    { icon: CheckCircle, text: 'Se em 90 dias o Scala.AI™ não aumentar em pelo menos 20% as vendas do seu e-commerce, você recebe 3 meses extras de acompanhamento estratégico gratuito até alcançar o resultado.' }
   ]
 
   return (
@@ -160,11 +160,12 @@ const ProvasDeCapacidade = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            <span className="gradient-text">Potencial de Resultados</span> do Seu Varejo
+            Prova Social & Estudos de Mercado
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Descubra o poder transformador quando IA, ferramentas, pessoas e processos 
-            trabalham juntos no seu negócio.
+            📊 “Pesquisas recentes mostram que <strong>93% dos consumidores brasileiros preferem comprar pelo WhatsApp</strong>,
+            mas a maioria das lojas não tem estrutura para responder rápido nem automatizar follow-ups. O resultado: mensagens não respondidas e vendas que somem.
+            O Scala.AI™ transforma o WhatsApp em um canal de conversão previsível.”
           </p>
         </motion.div>
 
@@ -184,6 +185,7 @@ const ProvasDeCapacidade = () => {
             geram resultados exponenciais no seu varejo.
           </p>
           
+          {/* Simplified formula presentation: keep the pillars succinct and avoid explicit ROI claims */}
           <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
             {scalaFormula.map((element, index) => {
               const IconComponent = element.icon
@@ -203,58 +205,10 @@ const ProvasDeCapacidade = () => {
                     <h4 className="font-bold text-white text-lg">{element.title}</h4>
                     <p className="text-accent text-sm">{element.subtitle}</p>
                   </div>
-                  
-                  {index < scalaFormula.length - 1 && (
-                    <div className="mx-4 text-2xl font-bold text-accent">
-                      {index === scalaFormula.length - 2 ? '=' : '+'}
-                    </div>
-                  )}
                 </motion.div>
               )
             })}
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {scalaFormula.slice(0, 4).map((element, index) => {
-              const IconComponent = element.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="glass-card p-6 text-center hover:bg-slate-800/60 transition-all duration-300"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${element.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <IconComponent className="text-white" size={24} />
-                  </div>
-                  <h4 className="font-bold text-white text-lg mb-2">{element.title}</h4>
-                  <p className="text-accent text-sm mb-3">{element.subtitle}</p>
-                  <p className="text-muted text-xs leading-relaxed">{element.description}</p>
-                </motion.div>
-              )
-            })}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-8"
-          >
-            <div className="glass-card p-8 text-center bg-gradient-to-r from-primary/20 to-accent/20 border-primary/30">
-              <div className="w-24 h-24 bg-gradient-to-r from-gradient-start to-gradient-end rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="text-white" size={40} />
-              </div>
-              <h4 className="font-bold text-white text-2xl mb-2">RESULTADOS</h4>
-              <p className="text-accent text-lg mb-3">Crescimento Sustentável</p>
-              <p className="text-muted leading-relaxed">
-                Melhorias consistentes e mensuráveis com foco em eficiência operacional real
-              </p>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Result Potentials by Segment */}
@@ -435,6 +389,21 @@ const ProvasDeCapacidade = () => {
             Descobrir meu potencial agora
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
           </button>
+        </motion.div>
+
+        {/* Quem Atendemos */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-10 text-center"
+        >
+          <h3 className="text-2xl font-bold mb-3">Quem Atendemos</h3>
+          <p className="text-muted max-w-3xl mx-auto">
+            E-commerces de <strong>moda feminina</strong>, lojas de <strong>biquínis</strong> e marcas de <strong>joias e acessórios</strong>
+            com faturamento entre <strong>R$ 200k e R$ 1M/mês</strong>. Se esse é o seu perfil e você investe em tráfego pago, o próximo passo é destravar crescimento com previsibilidade.
+          </p>
         </motion.div>
       </div>
 

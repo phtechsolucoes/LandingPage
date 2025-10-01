@@ -43,12 +43,30 @@ const SolucaoEndToEnd = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Os <span className="gradient-text">Pilares que Sustentam</span> o Seu Crescimento
+            O <span className="gradient-text">Scala.AI™ by PhTech</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Quatro módulos de IA integrados que trabalham em sinergia para transformar 
-            completamente a operação do seu varejo com resultados mensuráveis.
+            O <strong>Scala.AI™ by PhTech</strong> é um sistema proprietário que transforma o WhatsApp e o checkout em um motor previsível de crescimento.
           </p>
+
+          <div className="mt-6 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+            <div className="glass-card p-4">
+              <strong>✅ Recuperar até 35% das vendas perdidas.</strong>
+              <div className="text-sm text-muted">Recuperação automática via WhatsApp e follow-ups no checkout.</div>
+            </div>
+            <div className="glass-card p-4">
+              <strong>✅ Multiplicar por 3x a taxa de recompra e fidelização.</strong>
+              <div className="text-sm text-muted">Fluxos inteligentes de recompra e ofertas personalizadas por IA.</div>
+            </div>
+            <div className="glass-card p-4">
+              <strong>✅ Criar uma operação automática de conversão que funciona 24/7.</strong>
+              <div className="text-sm text-muted">Chatbots e automações no checkout que mantêm a conversão ativa a qualquer hora.</div>
+            </div>
+            <div className="glass-card p-4">
+              <strong>✅ Garantir previsibilidade de caixa e liberdade operacional.</strong>
+              <div className="text-sm text-muted">Métricas, dashboards e processos automáticos para previsibilidade em prazos curtos.</div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Process Flow */}

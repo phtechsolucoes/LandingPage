@@ -117,12 +117,18 @@ const Beneficios = () => {
           className="text-center mb-16"
         >
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            <span className="gradient-text">Benefícios</span> do Ecossistema Scala.AI™
+            Benefícios Tangíveis
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto">
-            Descubra como a integração de IA, ferramentas, pessoas e processos pode revolucionar 
-            completamente os resultados do seu varejo.
+          <p className="text-xl text-muted max-w-3xl mx-auto text-left">
+            Com o Scala.AI™, você terá:
           </p>
+
+          <ul className="mt-6 max-w-2xl mx-auto text-left space-y-3 text-muted">
+            <li><strong>Mais vendas imediatas:</strong> recuperação automática de carrinhos e PIX.</li>
+            <li><strong>Mais fidelização:</strong> fluxos de recompra inteligentes.</li>
+            <li><strong>Mais tranquilidade:</strong> uma operação que roda no piloto automático.</li>
+            <li><strong>Mais competitividade:</strong> enquanto outros perdem vendas, sua loja escala.</li>
+          </ul>
         </motion.div>
 
         {/* Transformation Areas */}
@@ -260,22 +266,7 @@ const Beneficios = () => {
               </div>
             </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl border border-accent/30"
-          >
-            <div className="text-center">
-              <h4 className="text-xl font-bold mb-2 text-white">Garantia de Sucesso</h4>
-              <p className="text-accent text-sm">
-                Se não alcançarmos pelo menos 150% de ROI em 90 dias, continuamos trabalhando 
-                gratuitamente até atingir os resultados prometidos.
-              </p>
-            </div>
-          </motion.div>
+          
         </motion.div>
       </div>
     </section>
