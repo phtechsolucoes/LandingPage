@@ -1,4 +1,3 @@
-// src/components/ComoFunciona.tsx (Reaproveitado para Prova Social)
 'use client'
 
 import React from 'react'
@@ -21,9 +20,11 @@ const ProvaSocial = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+          {/* COPY REVISADA: Título */}
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Onde Suas Vendas Estão se <span className="gradient-text">Perdendo</span>?
+            Onde Suas Vendas Estão se <span className="text-red-400">Perdendo</span>?
           </h2>
+          {/* COPY REVISADA: Corpo */}
           <p className="text-xl text-muted max-w-4xl mx-auto">
             A dor da perda é universal. Veja o que o mercado diz sobre o canal que você está subestimando.
           </p>
@@ -42,12 +43,13 @@ const ProvaSocial = () => {
                 93%
              </h3>
           </div>
+          {/* COPY REVISADA: Estatística de Compra */}
           <p className="text-xl md:text-2xl font-bold text-white mb-6">
             dos consumidores brasileiros <span className="text-accent">preferem comprar pelo WhatsApp</span>.
           </p>
+          {/* COPY REVISADA: Consequência da Falta de Automação */}
           <p className="text-lg text-muted max-w-3xl mx-auto mb-8">
-            Mas a maioria das lojas não tem estrutura para responder rápido nem automatizar follow-ups. 
-            O resultado: mensagens não respondidas e vendas que somem.
+            Mas a maioria das lojas não tem estrutura para responder rápido nem automatizar follow-ups. O resultado: mensagens não respondidas e vendas que somem.
           </p>
           <p className="text-xl font-bold text-accent flex items-center justify-center gap-3">
              <AlertTriangle size={24} /> O Scala.AI™ transforma o WhatsApp em um canal de conversão previsível.

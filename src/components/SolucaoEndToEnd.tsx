@@ -2,38 +2,43 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Target, Warehouse, MessageSquare, BarChart3, Users, TrendingUp, ArrowRight, Zap } from 'lucide-react'
+import { MessageSquare, TrendingUp, ArrowRight, Zap, RefreshCw, Lock, CheckCircle } from 'lucide-react' 
 
 const SolucaoEndToEnd = () => {
   const processSteps = [
     {
-      icon: Target,
-      title: "IA de Personalização",
-      description: "Conecte-se com cada cliente de forma única, criando campanhas sob medida que realmente convertem e geram mais vendas.",
-      features: ["Segmentação inteligente de clientes", "Campanhas personalizadas automáticas", "Experiência única por perfil"]
+      icon: TrendingUp,
+      title: "Recuperar Vendas Perdidas Imediatamente",
+      description: "Recupere até 35% das vendas perdidas por carrinho abandonado e PIX expirado. Sua loja para de sangrar dinheiro.",
+      features: ["Recuperação automática de Carrinhos e PIX", "WhatsApp para e-commerce como motor de conversão", "Automação Imediata"]
     },
     {
-      icon: Warehouse,
-      title: "IA de Estoque Inteligente",
-      description: "Previsões de demanda precisas e reposição automática, garantindo que o produto certo esteja sempre disponível no momento ideal.",
-      features: ["Previsão de demanda avançada", "Reposição automática inteligente", "Otimização de capital de giro"]
+      icon: RefreshCw,
+      title: "Multiplicar a Fidelização",
+      description: "Aumente 3x a recompra e fidelização com fluxos inteligentes que ativam clientes inativos e vendem mais para a base atual.",
+      features: ["Fluxos de recompra inteligentes", "Aumento da Fidelização/LTV", "Mensagens personalizadas por IA"]
     },
     {
       icon: MessageSquare,
-      title: "IA de Conversão",
-      description: "Chatbots e voicebots que não só respondem perguntas, mas convertem visitantes em clientes satisfeitos, 24 horas por dia.",
-      features: ["Atendimento automatizado 24/7", "Qualificação inteligente de leads", "Conversão otimizada por IA"]
+      title: "Operação no Piloto Automático",
+      description: "Crie uma operação automática de conversão que funciona 24 horas por dia, 7 dias por semana, sem depender de operadores humanos.",
+      features: ["Automação completa do processo de venda", "Atendimento e conversão ininterruptos", "Escala sem custo fixo"]
     },
     {
-      icon: BarChart3,
-      title: "IA de Decisão",
-      description: "Dashboards intuitivos com insights em tempo real para orientar suas decisões estratégicas, eliminando completamente o achismo.",
-      features: ["Dashboards em tempo real", "Insights preditivos automatizados", "Relatórios inteligentes personalizados"]
+      icon: Lock,
+      title: "Ambição: Crescimento com Previsibilidade",
+      description: "Garanta previsibilidade de caixa e liberdade operacional, sabendo exatamente o que esperar do seu funil de vendas.",
+      features: ["Previsão de Receita baseada em dados", "Controle Total do Funil de Vendas", "Liberdade para focar em Estratégia"]
     }
   ]
 
+  const handleWhatsAppClick = () => {
+    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
+    window.open(whatsappUrl, '_blank', 'noopener')
+  }
+
   return (
-    <section id="processo" className="py-20 px-4 relative">
+    <section id="solucao" className="py-20 px-4 relative">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,34 +47,17 @@ const SolucaoEndToEnd = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+          {/* COPY REVISADA: Título */}
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            O <span className="gradient-text">Scala.AI™ by PhTech</span>
+            O <span className="gradient-text">Scala.AI™ by PhTech</span> é o motor previsível de crescimento que o seu e-commerce precisa.
           </h2>
+          {/* COPY REVISADA: Corpo */}
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            O <strong>Scala.AI™ by PhTech</strong> é um sistema proprietário que transforma o WhatsApp e o checkout em um motor previsível de crescimento.
+            Nosso sistema proprietário transforma o WhatsApp e o checkout em uma fonte de lucro constante.
           </p>
-
-          <div className="mt-6 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            <div className="glass-card p-4">
-              <strong>✅ Recuperar até 35% das vendas perdidas.</strong>
-              <div className="text-sm text-muted">Recuperação automática via WhatsApp e follow-ups no checkout.</div>
-            </div>
-            <div className="glass-card p-4">
-              <strong>✅ Multiplicar por 3x a taxa de recompra e fidelização.</strong>
-              <div className="text-sm text-muted">Fluxos inteligentes de recompra e ofertas personalizadas por IA.</div>
-            </div>
-            <div className="glass-card p-4">
-              <strong>✅ Criar uma operação automática de conversão que funciona 24/7.</strong>
-              <div className="text-sm text-muted">Chatbots e automações no checkout que mantêm a conversão ativa a qualquer hora.</div>
-            </div>
-            <div className="glass-card p-4">
-              <strong>✅ Garantir previsibilidade de caixa e liberdade operacional.</strong>
-              <div className="text-sm text-muted">Métricas, dashboards e processos automáticos para previsibilidade em prazos curtos.</div>
-            </div>
-          </div>
         </motion.div>
 
-        {/* Process Flow */}
+        {/* Process Flow - New content focused on the 4 key results */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
           {processSteps.map((step, index) => {
             const IconComponent = step.icon
@@ -83,85 +71,45 @@ const SolucaoEndToEnd = () => {
                 className="relative"
               >
                 <div className="glass-card p-6 h-full hover:bg-slate-800/60 transition-all duration-300">
-                  {/* Step number */}
-                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {index + 1}
-                  </div>
-
                   {/* Icon */}
                   <div className="w-16 h-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl flex items-center justify-center mb-4">
                     <IconComponent className="text-accent" size={32} />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">✅ {step.title}</h3>
                   <p className="text-muted mb-4 text-sm leading-relaxed">{step.description}</p>
 
                   {/* Features */}
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mt-4">
                     {step.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center gap-2 text-xs">
+                        <CheckCircle className="text-accent flex-shrink-0" size={14} />
                         <span className="text-muted">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Arrow connector (hidden on mobile, last item) */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-accent">
-                    <ArrowRight size={24} />
-                  </div>
-                )}
               </motion.div>
             )
           })}
         </div>
 
-        {/* Results Section */}
-        <motion.div
+        {/* CTA to close the section */}
+         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="glass-card p-8 md:p-12 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mt-12"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Resultados que <span className="gradient-text">Transformam o Varejo</span>
-            </h3>
-            <p className="text-lg text-muted">
-              Com o ecossistema Scala.AI™, varejistas conquistam:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: TrendingUp, metric: "+180%", label: "Crescimento em Vendas" },
-              { icon: Users, metric: "95%", label: "Satisfação do Cliente" },
-              { icon: Zap, metric: "24/7", label: "IA Sempre Ativa" },
-              { icon: BarChart3, metric: "ROI 5x", label: "Retorno Garantido" }
-            ].map((result, index) => {
-              const IconComponent = result.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="text-white" size={24} />
-                  </div>
-                  <div className="text-2xl font-bold gradient-text mb-2">{result.metric}</div>
-                  <div className="text-sm text-muted">{result.label}</div>
-                </motion.div>
-              )
-            })}
-          </div>
+          <button
+            onClick={handleWhatsAppClick}
+            className="btn-secondary text-lg py-3 px-6 inline-flex items-center gap-2 group"
+          >
+            Quero Minha Operação Automática
+            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+          </button>
         </motion.div>
       </div>
     </section>

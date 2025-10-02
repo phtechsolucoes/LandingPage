@@ -1,8 +1,9 @@
+// src/components/CTAFinal.tsx
 'use client'
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Clock, CheckCircle, Zap, Gift, AlertCircle } from 'lucide-react'
+import { ArrowRight, Zap, AlertCircle } from 'lucide-react'
 
 const CTAFinal = () => {
   const handleWhatsAppClick = () => {
@@ -11,16 +12,14 @@ const CTAFinal = () => {
   }
 
   const features = [
-    "Análise detalhada do potencial de IA no seu segmento",
-    "Identificação de oportunidades específicas de crescimento",
-    "Estratégias personalizadas de implementação do Scala.AI™", 
-    "Roadmap detalhado de transformação digital do varejo",
-    "Estimativa realista de ROI e cronograma de resultados"
+    "Descubra o potencial de recuperação de vendas no seu negócio",
+    "Receba um Roadmap Estratégico para Automação de Conversão",
+    "Entenda como o Scala.AI™ garante 20% de aumento de vendas em 90 dias", 
   ]
 
   return (
-    <section id="faq" className="py-20 px-4 relative overflow-hidden">
-      {/* Background Effects */}
+    <section id="cta-final" className="py-20 px-4 relative overflow-hidden">
+      {/* Background Effects (Mantido) */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-dark to-accent/30" />
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-highlight/20 rounded-full blur-3xl" />
       
@@ -35,12 +34,12 @@ const CTAFinal = () => {
           className="text-center mb-12"
         >
           <h2 className="font-arthaus text-3xl md:text-6xl mb-6 leading-tight">
-            Você pode continuar perdendo vendas todos os dias…
+            <span className="text-red-400">Você Pode Continuar Perdendo Vendas</span>...
             <br />
-            Ou pode transformar o WhatsApp e o checkout em um motor previsível de crescimento.
+            <span className="gradient-text text-3xl md:text-4xl">Ou Escolher o Crescimento Previsível.</span>
           </h2>
           <p className="text-xl text-gray max-w-3xl mx-auto">
-            Agende um diagnóstico estratégico gratuito e descubra como recuperar vendas, automatizar o WhatsApp para e-commerce e ganhar previsibilidade.
+            O próximo passo para destravar o seu faturamento. Atenção: Vagas Limitadas!
           </p>
         </motion.div>
 
@@ -53,24 +52,23 @@ const CTAFinal = () => {
           className="glass-card p-8 md:p-12 mb-12 bg-gradient-to-r from-primary/20 to-accent/20 border-primary/30"
         >
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent border border-accent/30 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <CheckCircle size={16} />
-              Sessão Estratégica Gratuita
+            <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 border border-red-500/30 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <AlertCircle size={16} />
+              Vagas Limitadas - Agende sua Sessão
             </div>
             
             <h3 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Sessão Estratégica</span> Personalizada
+              <span className="gradient-text">Agende Seu Diagnóstico Estratégico</span> Gratuito
             </h3>
             
-              <p className="text-lg text-gray mb-8">
-                Uma análise completa e personalizada do potencial de transformação do seu varejo 
-                com estratégias específicas de IA do ecossistema Scala.AI™.
-                <span className="text-white font-medium block mt-2">Sem compromisso. Totalmente gratuito.</span>
-              </p>
+            <p className="text-lg text-gray mb-8">
+              Uma análise completa para entender o potencial de recuperação e automação de vendas
+              que o Scala.AI™ pode trazer para o seu e-commerce.
+            </p>
           </div>
 
           {/* Features List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -78,10 +76,10 @@ const CTAFinal = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center gap-3"
+                className="flex items-center gap-3 md:flex-col md:text-center"
               >
-                <CheckCircle className="text-accent flex-shrink-0" size={20} />
-                <span className="text-gray">{feature}</span>
+                <Zap className="text-accent flex-shrink-0" size={20} />
+                <span className="text-gray text-sm">{feature}</span>
               </motion.div>
             ))}
           </div>
@@ -104,24 +102,9 @@ const CTAFinal = () => {
             </button>
             
             <div className="text-sm text-gray space-y-1">
-              <div>✓ 100% Gratuito • ✓ Sem Compromisso • ✓ Análise Completa</div>
+              <div>✓ 100% Gratuito • ✓ Sem Compromisso • ✓ Garanta sua Vaga!</div>
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Final Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-        >
-          <p className="text-gray max-w-2xl mx-auto">
-            Nossa sessão estratégica vai revelar exatamente como o ecossistema Scala.AI™ 
-            pode revolucionar o seu varejo e qual o potencial real de crescimento e otimização 
-            que você tem pela frente.
-          </p>
         </motion.div>
       </div>
     </section>
