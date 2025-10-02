@@ -58,7 +58,7 @@ const CTAFinal = () => {
             </div>
             
             <h3 className="text-2xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Agende Seu Diagnóstico Estratégico</span> Gratuito
+              <span className="gradient-text">Agendar Reunião</span>Agora
             </h3>
             
             <p className="text-lg text-gray mb-8">
@@ -97,7 +97,7 @@ const CTAFinal = () => {
               className="btn-primary text-xl py-6 px-12 mb-4 group inline-flex items-center gap-4"
             >
               <Zap className="group-hover:scale-110 transition-transform" size={24} />
-              Agendar Diagnóstico Estratégico Gratuito
+              Quero Falar Agora
               <ArrowRight className="group-hover:translate-x-2 transition-transform" size={24} />
             </button>
             

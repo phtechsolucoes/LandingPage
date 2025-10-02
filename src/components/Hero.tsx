@@ -64,7 +64,7 @@ const Hero = () => {
               onClick={handleWhatsAppClick}
               className="btn-primary flex items-center gap-3 text-lg group"
             >
-              Agendar Diagnóstico Estratégico Gratuito
+              Quero Saber Mais
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
             
