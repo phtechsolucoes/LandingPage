@@ -14,7 +14,7 @@ const Problema = () => {
     {
       icon: ShoppingCart,
       title: "Vazamento no Checkout",
-      description: "Carrinhos abandonados, PIX expirados e boletos que nunca são pagos significam dinheiro *deixado na mesa* todos os dias."
+      description: "Carrinhos abandonados, PIX expirados e boletos que nunca são pagos significam dinheiro deixado na mesa todos os dias."
     },
     {
       icon: TrendingDown,

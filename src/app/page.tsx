@@ -5,7 +5,6 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Problema from '@/components/Problema'
 import SolucaoEndToEnd from '@/components/SolucaoEndToEnd'
-import ComoFunciona from '@/components/ComoFunciona'
 import Beneficios from '@/components/Beneficios'
 import ProvasDeCapacidade from '@/components/ProvaSocial'
 import CTAFinal from '@/components/CTAFinal'
@@ -20,7 +19,6 @@ export default function Home() {
         <Hero />
         <Problema />
         <SolucaoEndToEnd />
-        <ComoFunciona />
         <Beneficios />
         <ProvasDeCapacidade />
         <CTAFinal />

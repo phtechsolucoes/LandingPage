@@ -67,7 +67,7 @@ const ProvaSocial = () => {
             onClick={handleWhatsAppClick}
             className="btn-primary text-lg py-3 px-6 inline-flex items-center gap-2 group"
           >
-            Agendar Call Estratégica
+            Agendar Diagnóstico Estratégico Gratuito
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </button>
         </motion.div>

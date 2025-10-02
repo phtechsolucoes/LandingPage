@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronRight } from 'lucide-react'
+// 1. IMPORTAÇÃO DO ÍCONE
+import { Menu, X, ChevronRight, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 
 const Header = () => {
@@ -11,12 +12,12 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
 
-  // AJUSTE: Itens de navegação agora correspondem 100% às seções da page.tsx
+  // Itens de navegação conforme seu último ajuste
   const navItems = [
-    { label: 'Solução', href: '#solucao', id: 'solucao' },
-    { label: 'Como Funciona', href: '#como-funciona', id: 'como-funciona' }, // ADICIONADO
-    { label: 'Benefícios', href: '#beneficios', id: 'beneficios' },
-    { label: 'Clientes', href: '#prova-social', id: 'prova-social' }, // Renomeado de 'Prova Social' para 'Clientes' (mais comum)
+    { label: 'O Problema', href: '#problema', id: 'problema' },
+    { label: 'A solução', href: '#solucao', id: 'solucao' },
+    { label: 'O potencial desperdiçado', href: '#prova-social', id: 'prova-social' },
+    { label: 'Chance Imperdível', href: '#cta-final', id: 'cta-final'}
   ]
 
   // O restante do seu componente Header continua exatamente o mesmo...
@@ -46,7 +47,7 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll)
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []) // Dependência removida pois navItems agora é estático dentro do componente
+  }, [])
 
   // Smooth scroll
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -77,10 +78,6 @@ const Header = () => {
   }
 
   return (
-    // SEU CÓDIGO JSX DO HEADER VAI AQUI (sem alterações)
-    // ...
-    // Para economizar espaço, o JSX não foi repetido, mas ele permanece o mesmo do passo anterior.
-    // A única alteração necessária foi no array 'navItems' acima.
     <>
       <div className="progress-indicator" style={{ width: `${scrollProgress}%` }} />
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-card border-b border-white/20 backdrop-blur-xl' : 'bg-transparent border-b border-white/5'}`}>
@@ -88,7 +85,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="flex items-center">
               <button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false) }} className="focus:outline-none focus:ring-2 focus:ring-accent rounded-lg p-1 transition-transform hover:scale-105 flex items-center gap-3">
-                <Image src="/logo-phtech.png" alt="PH Tech Soluções - Voltar ao topo" width={60} height={60} className="h-20 w-auto" priority />
+                <Image src="/logo-phtech.png" alt="PH Tech Soluções - Voltar ao topo" width={72} height={72} className="h-20 w-auto" priority />
               </button>
             </motion.div>
             <nav className="hidden md:flex items-center space-x-2">
@@ -102,8 +99,16 @@ const Header = () => {
               ))}
             </nav>
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="hidden md:flex items-center gap-3">
-              <button onClick={handleWhatsAppClick} className="btn-secondary text-sm px-4 py-2">Falar Agora no WhatsApp</button>
-              <button onClick={handleCTAClick} className="btn-primary text-sm px-6 py-3">Agendar Call Estratégica</button>
+              {/* 2. BOTÃO WHATSAPP DESKTOP MELHORADO */}
+              <motion.button
+                onClick={handleWhatsAppClick}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-secondary text-sm px-4 py-2 flex items-center gap-2" // Adicionado flex, items-center e gap
+              >
+                <MessageCircle size={16} /> {/* Ícone adicionado */}
+                Falar Agora no WhatsApp
+              </motion.button>
             </motion.div>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-gray hover:text-accent transition-colors">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -121,7 +126,19 @@ const Header = () => {
                   ))}
                   <div className="mt-4 space-y-3">
                     <motion.button initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: navItems.length * 0.1 }} onClick={() => { handleCTAClick(); setIsMenuOpen(false) }} className="btn-primary text-sm w-full">Agendar Call Estratégica</motion.button>
-                    <motion.button initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: navItems.length * 0.1 + 0.1 }} onClick={() => { handleWhatsAppClick(); setIsMenuOpen(false) }} className="btn-secondary text-sm w-full">Falar Agora no WhatsApp</motion.button>
+                    {/* 3. BOTÃO WHATSAPP MOBILE MELHORADO */}
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      whileHover={{ scale: 1.02 }} // Efeito mais sutil para mobile
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ duration: 0.3, delay: navItems.length * 0.1 + 0.1 }}
+                      onClick={() => { handleWhatsAppClick(); setIsMenuOpen(false) }}
+                      className="btn-secondary text-sm w-full flex items-center justify-center gap-2" // Adicionado flex, items-center, justify-center e gap
+                    >
+                      <MessageCircle size={16} /> {/* Ícone adicionado */}
+                      Falar Agora no WhatsApp
+                    </motion.button>
                   </div>
                 </nav>
               </motion.div>
@@ -133,4 +150,4 @@ const Header = () => {
   )
 }
 
-export default Header 
+export default Header
