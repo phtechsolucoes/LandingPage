@@ -38,9 +38,9 @@ const Hero = () => {
             className="font-arthaus text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight"
           >
             {/* COPY REVISADA: Foco em Lucro e Máquina de Vendas */}
-            Transforme o <span className="gradient-text">WhatsApp e o Checkout</span>
+            Transforme o <span className="gradient-text">WhatsApp</span>
             <br />
-            em uma <span className="text-accent">Máquina de Vendas Imediatas</span>
+            em uma <span className="text-accent">Máquina de Vendas com IA</span>
           </motion.h1>
 
           <motion.p
