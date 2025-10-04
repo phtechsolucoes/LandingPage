@@ -246,14 +246,31 @@ export async function POST(request: Request) {
       createdAt: new Date(),
     }
 
-    // Aqui você pode salvar no banco de dados
-    // await saveToDatabase(lead)
+    // Log do lead (útil para debug em produção)
+    console.log('📊 Novo lead recebido:', {
+      name: lead.name,
+      email: lead.email,
+      score: lead.score,
+      status: lead.status,
+    })
 
-    // Enviar e-mails
-    await Promise.all([
-      sendEmailToPedro(lead),
-      sendEmailToLead(lead),
-    ])
+    // Tentar enviar e-mails (não bloqueia se falhar)
+    try {
+      await Promise.race([
+        Promise.all([
+          sendEmailToPedro(lead),
+          sendEmailToLead(lead),
+        ]),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Email timeout')), 8000)
+        )
+      ])
+      console.log('✅ E-mails enviados com sucesso')
+    } catch (emailError) {
+      // Log do erro mas continua o fluxo
+      console.error('⚠️ Erro ao enviar e-mails (não crítico):', emailError)
+      console.log('Lead salvo mesmo sem e-mail. Dados:', lead)
+    }
 
     const calendlyUrl = process.env.CALENDLY_URL || 'https://calendly.com/phtechsolucoescontato/diagnostico-estrategico-gratuito-scala-ai'
 
@@ -265,9 +282,13 @@ export async function POST(request: Request) {
       calendlyUrl,
     })
   } catch (error) {
-    console.error('Erro ao processar lead:', error)
+    console.error('❌ Erro crítico ao processar lead:', error)
     return NextResponse.json(
-      { success: false, message: 'Erro ao processar formulário' },
+      { 
+        success: false, 
+        message: 'Erro ao processar formulário',
+        error: process.env.NODE_ENV === 'development' ? String(error) : undefined
+      },
       { status: 500 }
     )
   }
