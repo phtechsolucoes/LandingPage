@@ -12,12 +12,13 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
 
-  // Itens de navegação conforme seu último ajuste
+  // Navegação reorganizada e otimizada
   const navItems = [
-    { label: 'O Problema', href: '#problema', id: 'problema' },
-    { label: 'A solução', href: '#solucao', id: 'solucao' },
-    { label: 'O potencial desperdiçado', href: '#prova-social', id: 'prova-social' },
-    { label: 'Chance Imperdível', href: '#cta-final', id: 'cta-final'}
+    { label: 'Início', href: '#hero', id: 'hero' },
+    { label: 'Como Funciona', href: '#solucao', id: 'solucao' },
+    { label: 'Benefícios', href: '#beneficios', id: 'beneficios' },
+    { label: 'Blog', href: '/blog', id: 'blog', isExternal: true },
+    { label: 'Diagnóstico', href: '/diagnostico', id: 'diagnostico', isExternal: true, highlight: true }
   ]
 
   // O restante do seu componente Header continua exatamente o mesmo...
@@ -50,7 +51,13 @@ const Header = () => {
   }, [])
 
   // Smooth scroll
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal?: boolean) => {
+    // Se for link externo (como /blog), deixa o comportamento padrão
+    if (isExternal || href.startsWith('/')) {
+      setIsMenuOpen(false)
+      return
+    }
+    
     e.preventDefault()
     const targetId = href.replace('#', '')
     const element = document.getElementById(targetId)
@@ -90,9 +97,23 @@ const Header = () => {
             </motion.div>
             <nav className="hidden md:flex items-center space-x-2">
               {navItems.map((item, index) => (
-                <motion.a key={item.label} href={item.href} onClick={(e) => handleNavClick(e, item.href)} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${activeSection === item.id ? 'text-accent bg-accent/10 border border-accent/20' : 'text-gray hover:text-accent hover:bg-white/5'}`}>
+                <motion.a 
+                  key={item.label} 
+                  href={item.href} 
+                  onClick={(e) => handleNavClick(e, item.href, item.isExternal)} 
+                  initial={{ opacity: 0, y: -10 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 0.6, delay: index * 0.1 }} 
+                  className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    item.highlight 
+                      ? 'bg-accent text-navy hover:bg-accent/90 hover:scale-105' 
+                      : activeSection === item.id 
+                        ? 'text-accent bg-accent/10 border border-accent/20' 
+                        : 'text-gray hover:text-accent hover:bg-white/5'
+                  }`}
+                >
                   {item.label}
-                  {activeSection === item.id && (
+                  {activeSection === item.id && !item.highlight && (
                     <motion.div layoutId="activeIndicator" className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primaryLight/20 rounded-lg -z-10" transition={{ duration: 0.3 }} />
                   )}
                 </motion.a>
@@ -119,7 +140,21 @@ const Header = () => {
               <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: 'easeInOut' }} className="md:hidden py-4 border-t border-white/10 bg-navy/95 backdrop-blur-xl">
                 <nav className="flex flex-col space-y-2">
                   {navItems.map((item, index) => (
-                    <motion.a key={item.label} href={item.href} onClick={(e) => handleNavClick(e, item.href)} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: index * 0.1 }} className={`flex items-center justify-between px-4 py-3 rounded-lg font-medium transition-all duration-300 ${activeSection === item.id ? 'text-accent bg-accent/10 border border-accent/20' : 'text-gray hover:text-accent hover:bg-white/5'}`}>
+                    <motion.a 
+                      key={item.label} 
+                      href={item.href} 
+                      onClick={(e) => handleNavClick(e, item.href, item.isExternal)} 
+                      initial={{ opacity: 0, x: -20 }} 
+                      animate={{ opacity: 1, x: 0 }} 
+                      transition={{ duration: 0.3, delay: index * 0.1 }} 
+                      className={`flex items-center justify-between px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                        item.highlight 
+                          ? 'bg-accent text-navy border-2 border-accent' 
+                          : activeSection === item.id 
+                            ? 'text-accent bg-accent/10 border border-accent/20' 
+                            : 'text-gray hover:text-accent hover:bg-white/5'
+                      }`}
+                    >
                       <span>{item.label}</span>
                       <ChevronRight size={16} className={`transition-transform duration-300 ${activeSection === item.id ? 'rotate-90' : ''}`} />
                     </motion.a>
