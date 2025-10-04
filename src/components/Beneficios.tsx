@@ -11,35 +11,32 @@ import {
 } from 'lucide-react'
 
 const Beneficios = () => {
-  // New benefits list (4 points)
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Mais Vendas Imediatas",
-      description: "Recuperação automática de carrinhos e PIX expirados. Sua loja fatura mais no mesmo dia.",
+      title: "Recupera vendas perdidas",
+      description: "Carrinhos abandonados, PIX expirados, boletos pendentes. Resgatamos o que estava sendo desperdiçado.",
     },
     {
       icon: RefreshCw,
-      title: "Mais Fidelização e Recompra",
-      description: "Fluxos de recompra inteligentes que trazem seus clientes de volta 3x mais rápido, maximizando o LTV.",
+      title: "Aumenta recompra",
+      description: "Fluxos inteligentes que ativam clientes inativos e vendem mais para quem já confia na sua marca.",
     },
     {
       icon: Zap,
-      title: "Mais Tranquilidade Operacional",
-      description: "Uma operação de conversão que roda no piloto automático 24/7, liberando seu tempo para focar na estratégia e no produto.",
+      title: "Reduz custos operacionais",
+      description: "Automação que funciona 24/7. Você economiza tempo, dinheiro e ainda aumenta a conversão.",
     },
     {
       icon: Target,
-      title: "Mais Competitividade e Escala",
-      description: "Enquanto outros perdem 35% das vendas, sua loja escala o crescimento com previsibilidade e eficiência.",
+      title: "Dá previsibilidade de faturamento",
+      description: "Menos incerteza, mais controle. Você sabe exatamente o que esperar do seu funil de vendas.",
     }
   ]
   
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
-    window.open(whatsappUrl, '_blank', 'noopener')
+  const handleDiagnosticoClick = () => {
+    window.location.href = '/diagnostico'
   }
-
 
   return (
     <section id="beneficios" className="py-20 px-4 relative">
@@ -51,13 +48,11 @@ const Beneficios = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          {/* COPY REVISADA: Título */}
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            <span className="gradient-text">Destrave o Crescimento</span>: 4 Resultados Imediatos
+            O que você ganha ao trabalhar com a <span className="gradient-text">Scala.AI™</span>
           </h2>
-          {/* COPY REVISADA: Corpo */}
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            O Scala.AI™ é um investimento direto no seu faturamento. Esses são os benefícios tangíveis que você terá:
+            Não é só tecnologia. É crescimento real, previsível e sustentável.
           </p>
         </motion.div>
 
@@ -107,12 +102,15 @@ const Beneficios = () => {
           className="text-center mt-12"
         >
            <button
-            onClick={handleWhatsAppClick}
+            onClick={handleDiagnosticoClick}
             className="btn-primary text-lg py-3 px-6 inline-flex items-center gap-2 group"
           >
-            Quero Agendar a Call Estratégica
+            Fazer Diagnóstico Gratuito
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </button>
+          <p className="text-sm text-muted mt-4">
+            Libera você para focar em estratégia
+          </p>
         </motion.div>
       </div>
     </section>

@@ -5,9 +5,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Zap } from 'lucide-react'
 
 const Hero = () => {
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
-    window.open(whatsappUrl, '_blank', 'noopener')
+  const handleDiagnosticoClick = () => {
+    window.location.href = '/diagnostico'
   }
 
   return (
@@ -27,7 +26,7 @@ const Hero = () => {
           >
             <span className="inline-flex items-center gap-2 bg-accent/20 text-accent border border-accent/30 px-4 py-2 rounded-full text-sm font-medium">
               <Zap size={16} />
-              Tecnologia Exclusiva Scala.AI™ by PhTech
+              Consultoria de Crescimento Scala.AI™ by PhTech
             </span>
           </motion.div>
 
@@ -37,10 +36,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-arthaus text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight"
           >
-            {/* COPY REVISADA: Foco em Lucro e Máquina de Vendas */}
-            Transforme o <span className="gradient-text">WhatsApp</span>
+            Tenha uma <span className="gradient-text">visão clara</span>
             <br />
-            em uma <span className="text-accent">Máquina de Vendas com IA</span>
+            de como sua <span className="text-accent">loja pode escalar com IA</span>
           </motion.h1>
 
           <motion.p
@@ -49,8 +47,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray max-w-4xl mx-auto mb-12 leading-relaxed"
           >
-            {/* COPY REVISADA: Foco na Ambição e Triplicar Resultados */}
-            Pare de depender só de tráfego pago. Recupere até 35% das vendas perdidas, triplique a taxa de recompra e garanta previsibilidade de caixa em até 90 dias com Inteligência Artificial.
+            Descubra, em uma call gratuita, como aumentar vendas e previsibilidade sem inflar custos.
           </motion.p>
 
           <motion.div
@@ -59,21 +56,20 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            {/* CTA PRINCIPAL: ÚLTIMAS VAGAS */}
             <button
-              onClick={handleWhatsAppClick}
+              onClick={handleDiagnosticoClick}
               className="btn-primary flex items-center gap-3 text-lg group"
             >
-              Quero Saber Mais
+              Fazer Diagnóstico Gratuito
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </button>
             
             <p className="text-sm text-gray font-medium">
-              ✓ Avaliação Gratuita • ✓ Últimas Vagas para Acompanhamento
+              ✓ 100% Gratuito • ✓ Vagas Limitadas
             </p>
           </motion.div>
 
-          {/* Cards de Destaque (Atualizado com a nova copy) */}
+          {/* Cards de Destaque */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,10 +77,10 @@ const Hero = () => {
             className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
           >
             {[
-              { label: "+35% Vendas", desc: "Recuperação de Carrinho/PIX" },
-              { label: "3x Recompra", desc: "Fidelização e Lifetime Value" },
-              { label: "24/7", desc: "Operação Automática de Conversão" },
-              { label: "90 Dias", desc: "Previsibilidade e Resultados" }
+              { label: "Recupera vendas", desc: "Carrinhos, PIX, boletos" },
+              { label: "Aumenta recompra", desc: "Fluxos inteligentes" },
+              { label: "Reduz custos", desc: "Operacionais" },
+              { label: "Previsibilidade", desc: "de faturamento" }
             ].map((benefit, index) => (
               <motion.div 
                 key={index} 

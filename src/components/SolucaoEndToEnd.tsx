@@ -32,9 +32,8 @@ const SolucaoEndToEnd = () => {
     }
   ]
 
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
-    window.open(whatsappUrl, '_blank', 'noopener')
+  const handleDiagnosticoClick = () => {
+    window.location.href = '/diagnostico'
   }
 
   return (
@@ -47,13 +46,11 @@ const SolucaoEndToEnd = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          {/* COPY REVISADA: Título */}
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            O <span className="gradient-text">Scala.AI™ by PhTech</span> é o motor previsível de crescimento que o seu e-commerce precisa.
+            Como a <span className="gradient-text">Scala.AI™</span> transforma sua operação
           </h2>
-          {/* COPY REVISADA: Corpo */}
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Nosso sistema proprietário transforma o WhatsApp e o checkout em uma fonte de lucro constante.
+            Não vendemos ferramentas. Entregamos crescimento previsível e sustentável.
           </p>
         </motion.div>
 
@@ -104,10 +101,10 @@ const SolucaoEndToEnd = () => {
           className="text-center mt-12"
         >
           <button
-            onClick={handleWhatsAppClick}
+            onClick={handleDiagnosticoClick}
             className="btn-secondary text-lg py-3 px-6 inline-flex items-center gap-2 group"
           >
-            Quero Minha Operação Automática
+            Ver Como Isso Funciona na Prática
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </button>
         </motion.div>

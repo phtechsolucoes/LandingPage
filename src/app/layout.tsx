@@ -10,12 +10,12 @@ type Metadata = {
   viewport: string
 }
 
-// SEO OTIMIZADO (Unificado com o foco em conversão e palavras-chave)
+// SEO OTIMIZADO - Foco em Consultoria de Crescimento
 export const metadata: Metadata = {
-  title: 'Scala.AI™ by PhTech — WhatsApp para e-commerce e automação de vendas',
-  description: 'Scala.AI™ by PhTech transforma WhatsApp e checkout em uma máquina automática de vendas. Recupere até 35% das vendas, automação e inteligência artificial para e-commerce.',
-  keywords: 'WhatsApp para e-commerce, recuperar vendas, automação, inteligência artificial para e-commerce, aumento de vendas, Scala.AI, automação de checkout, vendas e-commerce, fidelização',
-  authors: [{ name: 'Ph Tech Soluções' }],
+  title: 'Scala.AI™ by PhTech — Consultoria de Crescimento com IA para E-commerce',
+  description: 'Tenha uma visão clara de como sua loja pode escalar com IA. Descubra como aumentar vendas e previsibilidade sem inflar custos. Diagnóstico gratuito.',
+  keywords: 'consultoria ecommerce, crescimento com ia, automação vendas, recuperar vendas perdidas, previsibilidade faturamento, escalar loja virtual, inteligência artificial ecommerce, Scala.AI',
+  authors: [{ name: 'PhTech Soluções' }],
   viewport: 'width=device-width, initial-scale=1',
 }
 

@@ -5,9 +5,8 @@ import { motion } from 'framer-motion'
 import { MessageCircle, ArrowRight, AlertTriangle } from 'lucide-react'
 
 const ProvaSocial = () => {
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = 'https://wa.me/5575982300164?text=Olá%20PH%20Tech%20Soluções,%20tenho%20interesse%20no%20ecossistema%20Scala.AI%20e%20gostaria%20de%20agendar%20uma%20sessão%20estratégica%20gratuita'
-    window.open(whatsappUrl, '_blank', 'noopener')
+  const handleDiagnosticoClick = () => {
+    window.location.href = '/diagnostico'
   }
 
   return (
@@ -20,13 +19,11 @@ const ProvaSocial = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          {/* COPY REVISADA: Título */}
           <h2 className="font-arthaus text-3xl md:text-5xl mb-6">
-            Onde Suas Vendas Estão se <span className="text-red-400">Perdendo</span>?
+            O potencial <span className="gradient-text">desperdiçado</span> que você não vê
           </h2>
-          {/* COPY REVISADA: Corpo */}
           <p className="text-xl text-muted max-w-4xl mx-auto">
-            A dor da perda é universal. Veja o que o mercado diz sobre o canal que você está subestimando.
+            Enquanto você investe em tráfego, uma parte enorme das oportunidades está escapando silenciosamente.
           </p>
         </motion.div>
 
@@ -43,16 +40,14 @@ const ProvaSocial = () => {
                 93%
              </h3>
           </div>
-          {/* COPY REVISADA: Estatística de Compra */}
           <p className="text-xl md:text-2xl font-bold text-white mb-6">
-            dos consumidores brasileiros <span className="text-accent">preferem comprar pelo WhatsApp</span>.
+            dos brasileiros <span className="text-accent">querem comprar pelo WhatsApp</span>.
           </p>
-          {/* COPY REVISADA: Consequência da Falta de Automação */}
           <p className="text-lg text-muted max-w-3xl mx-auto mb-8">
-            Mas a maioria das lojas não tem estrutura para responder rápido nem automatizar follow-ups. O resultado: mensagens não respondidas e vendas que somem.
+            Mas responder rápido, nutrir leads e recuperar vendas perdidas exige mais do que boa vontade. Exige estrutura. E é exatamente isso que a Scala.AI™ constrói com você.
           </p>
-          <p className="text-xl font-bold text-accent flex items-center justify-center gap-3">
-             <AlertTriangle size={24} /> O Scala.AI™ transforma o WhatsApp em um canal de conversão previsível.
+          <p className="text-xl font-semibold text-white">
+            Não é sobre instalar uma ferramenta. É sobre <span className="text-accent">criar previsibilidade</span>.
           </p>
         </motion.div>
         
@@ -64,10 +59,10 @@ const ProvaSocial = () => {
           className="text-center mt-12"
         >
           <button
-            onClick={handleWhatsAppClick}
+            onClick={handleDiagnosticoClick}
             className="btn-primary text-lg py-3 px-6 inline-flex items-center gap-2 group"
           >
-            Quero saber Mais
+            Descobrir Onde Estou Perdendo
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </button>
         </motion.div>

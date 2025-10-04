@@ -1,14 +1,16 @@
-# Landing Page - Solução End-to-End
+# Scala.AI™ by PhTech - Landing Page & Diagnóstico
 
-Uma landing page moderna e responsiva construída com Next.js 14, Tailwind CSS e Framer Motion para conversão de leads.
+Uma landing page consultiva e responsiva construída com Next.js 14, com formulário de diagnóstico multipasso, lead scoring automático e integração com Calendly.
 
 ## 🚀 Tecnologias
 
-- **Next.js 14** (App Router)
+- **Next.js 14** (App Router + API Routes)
 - **Tailwind CSS** com configuração customizada
 - **Framer Motion** para animações
 - **Lucide React** para ícones
 - **TypeScript** para type safety
+- **Nodemailer** para envio de emails
+- **Lead Scoring** automático
 
 ## 🎨 Design Features
 
@@ -32,10 +34,14 @@ Uma landing page moderna e responsiva construída com Next.js 14, Tailwind CSS e
    cp env.example .env.local
    ```
    
-4. Edite `.env.local` com sua URL do formulário N8N:
+4. Edite `.env.local` com suas credenciais:
    ```
-   NEXT_PUBLIC_N8N_FORM_URL=https://sua-instancia-n8n.com/webhook/seu-form-id
+   EMAIL_USER=seu-email@gmail.com
+   EMAIL_PASSWORD=sua-senha-de-app
+   CALENDLY_URL=https://calendly.com/seu-link
    ```
+   
+   **Importante**: Para Gmail, use uma senha de aplicativo (App Password). Acesse: https://myaccount.google.com/apppasswords
 
 5. Execute em modo desenvolvimento:
    ```bash
@@ -62,25 +68,60 @@ src/
     └── CTAFinal.tsx     # CTA final com urgência
 ```
 
-## 🎯 Seções da Landing Page
+## 🎯 Funcionalidades
 
-1. **Hero** - Headline impactante + subheadline + CTA
-2. **Problema** - Por que empresas perdem leads/vendas
-3. **Solução End-to-End** - Fluxo visual do processo
-4. **Como Funciona** - 3 etapas detalhadas
-5. **Benefícios** - Cards com ícones dos benefícios
-6. **Provas Sociais** - Depoimentos e estatísticas
-7. **CTA Final** - Urgência e fechamento
+### Landing Page (/)
+1. **Hero** - Headline consultiva focada em visão clara de crescimento
+2. **Problema** - Tom empático sobre dores do e-commerce
+3. **Solução End-to-End** - Como a Scala.AI™ resolve
+4. **Benefícios** - Foco em lucro real e previsibilidade
+5. **Provas Sociais** - Resultados e depoimentos
+6. **CTA Final** - Convite para diagnóstico gratuito
+
+### Página de Diagnóstico (/diagnostico)
+- **Formulário multipasso** (4 etapas):
+  1. Sobre a loja (nome, email, plataforma, etc)
+  2. Estrutura atual (faturamento, equipe)
+  3. Marketing e operação (investimento em tráfego)
+  4. Dores e metas (desafios e objetivos)
+  
+- **Lead Scoring automático**:
+  - Faturamento: 10-40 pontos
+  - Investimento em tráfego: 0-20 pontos
+  - Tamanho da equipe: 0-10 pontos
+  - Tráfego ativo: +10 pontos
+  
+- **Classificação**:
+  - ≥ 70 pontos: Qualified (Qualificado)
+  - 40-69 pontos: Warm (Aquecido)
+  - < 40 pontos: Early Stage (Inicial)
+
+### Automações
+- **Email para Pedro**: Notificação com todos os dados e score do lead
+- **Email para Lead**: Agradecimento + link do Calendly
+- **Integração Calendly**: Link direto para agendamento após diagnóstico
 
 ## ⚙️ Configuração
 
-### CTA Buttons
-Todos os botões de CTA redirecionam para `process.env.NEXT_PUBLIC_N8N_FORM_URL`
+### Email (Gmail)
+1. Ative a verificação em 2 etapas: https://myaccount.google.com/security
+2. Crie uma senha de aplicativo: https://myaccount.google.com/apppasswords
+3. Use a senha de aplicativo no `.env.local`
+
+### Calendly
+1. Configure sua conta no Calendly
+2. Crie um evento com os horários 17:15-18:15 e 18:15-19:15
+3. Copie o link do evento para `.env.local`
+
+### Lead Scoring
+O algoritmo de pontuação está em `/src/app/api/leads/route.ts`.
+Você pode ajustar os pesos conforme sua estratégia.
 
 ### Customização
 - **Cores**: Edite `tailwind.config.ts` para alterar a paleta
 - **Fontes**: Modifique `globals.css` para trocar tipografia
 - **Animações**: Ajuste componentes individuais do Framer Motion
+- **Copy**: Edite os componentes em `src/components/`
 
 ## 🚀 Deploy
 
