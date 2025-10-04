@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Sitemap: https://phtechsolucoes.com.br/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bloquear páginas administrativas se existirem
+Disallow: /api/
+Disallow: /_next/
+
+# Permitir crawling do blog e páginas principais
+Allow: /blog/
+Allow: /diagnostico
